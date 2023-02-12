@@ -84,9 +84,9 @@ const RESOURCES = {
 "assets/packages/font_awesome_flutter/lib/fonts/fa-regular-400.ttf": "5178af1d278432bec8fc830d50996d6f",
 "assets/packages/font_awesome_flutter/lib/fonts/fa-solid-900.ttf": "aa1ec80f1b30a51d64c72f669c1326a7",
 "icons/logo.png": "508623330cb0250a035dd873fcc2ab9b",
-"index.html": "08d5f73a2dd85991076ea1e0030e0ae5",
-"/": "08d5f73a2dd85991076ea1e0030e0ae5",
-"main.dart.js": "5f01f3c3c4fae02ee46391486302cccd",
+"index.html": "7268be91c3a076632a515ac77276c548",
+"/": "7268be91c3a076632a515ac77276c548",
+"main.dart.js": "647ca104827024b0b63d384e22436a9f",
 "manifest.json": "36489b17746c311dd09db8c27d40fa31",
 "version.json": "0e8588d084d0b8819192f7e4b2dd0ea3"
 };
