@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ShofickHossain/presentation/layout/adaptive.dart';
 import 'package:ShofickHossain/presentation/pages/home/sections/header_section/widgets.dart';
@@ -9,6 +10,8 @@ import 'package:ShofickHossain/presentation/widgets/spaces.dart';
 import 'package:ShofickHossain/utils/functions.dart';
 import 'package:ShofickHossain/values/values.dart';
 import 'dart:html' as html;
+
+import 'package:url_launcher/url_launcher.dart';
 
 const double bodyTextSizeLg = 16.0;
 const double bodyTextSizeSm = 14.0;
@@ -130,7 +133,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                       StringConst.FIRST_NAME,
                       style: textTheme.headline1?.copyWith(
                         color: AppColors.grey50,
-                        fontSize: headerIntroTextSize * 2.5,
+                        fontSize: headerIntroTextSize * 2,
                       ),
                     ),
                   ),
@@ -154,7 +157,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                                     StringConst.INTRO,
                                     speed: Duration(milliseconds: 60),
                                     textStyle: textTheme.headline2?.copyWith(
-                                      fontSize: headerIntroTextSize,
+                                      fontSize: 16,
                                     ),
                                   ),
                                 ],
@@ -172,7 +175,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                                     StringConst.POSITION,
                                     speed: Duration(milliseconds: 80),
                                     textStyle: textTheme.headline2?.copyWith(
-                                      fontSize: headerIntroTextSize,
+                                      fontSize: 14,
                                       color: AppColors.red,
                                       height: 1.2,
                                     ),
@@ -186,7 +189,7 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                             SpaceH16(),
                             ConstrainedBox(
                               constraints:
-                                  BoxConstraints(maxWidth: screenWidth * 0.5),
+                                  BoxConstraints(maxWidth: screenWidth * 0.45),
                               child: SelectableText(
                                 StringConst.ABOUT_DEV,
                                 style: bodyTextStyle?.copyWith(
@@ -207,9 +210,22 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                                       style: socialTitleStyle,
                                     ),
                                     SpaceH8(),
-                                    SelectableText(
-                                      "${StringConst.DEV_EMAIL_2}",
-                                      style: bodyTextStyle,
+                                    RichText(
+                                      text: TextSpan(
+                                        text: StringConst.DEV_EMAIL_2,
+                                        style:
+                                            new TextStyle(color: Colors.blue),
+                                        recognizer: new TapGestureRecognizer()
+                                          ..onTap = () async {
+                                            const uri =
+                                                'mailto:shofickhossain@gmail.com?subject=Want To Hire You';
+                                            if (await canLaunch(uri)) {
+                                              await launch(uri);
+                                            } else {
+                                              throw 'Could not launch $uri';
+                                            }
+                                          },
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -222,9 +238,21 @@ class _HeaderSectionMobileState extends State<HeaderSectionMobile>
                                       style: socialTitleStyle,
                                     ),
                                     SpaceH8(),
-                                    SelectableText(
-                                      "${StringConst.BEHANCE_ID}",
-                                      style: bodyTextStyle,
+                                    RichText(
+                                      text: TextSpan(
+                                        text: StringConst.BEHANCE_ID,
+                                        style:
+                                            new TextStyle(color: Colors.blue),
+                                        recognizer: new TapGestureRecognizer()
+                                          ..onTap = () async {
+                                            const uri = StringConst.BEHANCE_ID;
+                                            if (await canLaunch(uri)) {
+                                              await launch(uri);
+                                            } else {
+                                              throw 'Could not launch $uri';
+                                            }
+                                          },
+                                      ),
                                     ),
                                   ],
                                 ),

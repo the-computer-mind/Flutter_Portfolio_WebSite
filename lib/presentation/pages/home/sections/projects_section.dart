@@ -107,7 +107,7 @@ class _ProjectsSectionState extends State<ProjectsSection>
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        "UI Built Using Flutter, Nodejs",
+                        "Flutter Beautiful UI Templates, I Have",
                         style: TextStyle(
                             fontSize: 20, fontWeight: FontWeight.bold),
                       ),
@@ -389,69 +389,6 @@ class _ProjectsSectionState extends State<ProjectsSection>
                       ),
                     ),
 
-                    //other Projects
-                    Container(
-                      height: size.height * 0.86,
-                      width: size.width - 100,
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              OSImages(
-                                image: "images/pic118.jpeg",
-                              ),
-                              OSImages(
-                                image: "images/pic119.jpeg",
-                              ),
-                              OSImages(
-                                image: "images/pic120.png",
-                              ),
-                              OSImages(
-                                image: "images/pic121.png",
-                              ),
-                            ],
-                          ),
-                          SizedBox(
-                            height: size.height * 0.04,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceAround,
-                            children: [
-                              CustomText(
-                                text: "Prime Videos UI",
-                                textsize: 16.0,
-                                color: Colors.white.withOpacity(0.4),
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 1.75,
-                              ),
-                              CustomText(
-                                text: "Tic Tac Toe Game",
-                                textsize: 16.0,
-                                color: Colors.white.withOpacity(0.4),
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 1.75,
-                              ),
-                              CustomText(
-                                text: "Currency Converter UI",
-                                textsize: 16.0,
-                                color: Colors.white.withOpacity(0.4),
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 1.75,
-                              ),
-                              CustomText(
-                                text: "Love Calculator",
-                                textsize: 16.0,
-                                color: Colors.white.withOpacity(0.4),
-                                fontWeight: FontWeight.w700,
-                                letterSpacing: 1.75,
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-
                     FeatureProject(
                       imagePath: "images/pic102.gif",
                       ontab: () {
@@ -598,7 +535,7 @@ class _ProjectsSectionState extends State<ProjectsSection>
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            "UI Built Using Flutter, Nodejs",
+                            "Flutter Beautiful UI Templates, I Have",
                             style: TextStyle(
                                 fontSize: 20, fontWeight: FontWeight.bold),
                           ),

@@ -214,7 +214,7 @@ class _BlogSectionState extends State<BlogSection> {
     double viewportFraction = 1.0,
     double aspectRatio = 0.1,
     int initialPage = 1,
-    ScrollPhysics? scrollPhysics = const NeverScrollableScrollPhysics(),
+    ScrollPhysics? scrollPhysics = const AlwaysScrollableScrollPhysics(),
   }) {
     return CarouselOptions(
         autoPlay: autoPlay,

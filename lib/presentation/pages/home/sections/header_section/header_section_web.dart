@@ -1,4 +1,5 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:ShofickHossain/presentation/layout/adaptive.dart';
 import 'package:ShofickHossain/presentation/pages/home/sections/header_section/widgets.dart';
@@ -10,6 +11,8 @@ import 'package:ShofickHossain/utils/functions.dart';
 import 'package:ShofickHossain/values/values.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'dart:html' as html;
+
+import 'package:url_launcher/url_launcher.dart';
 
 const double bodyTextSizeLg = 16.0;
 const double bodyTextSizeSm = 14.0;
@@ -226,9 +229,22 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                                       style: socialTitleStyle,
                                     ),
                                     SpaceH8(),
-                                    SelectableText(
-                                      "${StringConst.DEV_EMAIL_2}",
-                                      style: bodyTextStyle,
+                                    RichText(
+                                      text: TextSpan(
+                                        text: StringConst.DEV_EMAIL_2,
+                                        style:
+                                            new TextStyle(color: Colors.blue),
+                                        recognizer: new TapGestureRecognizer()
+                                          ..onTap = () async {
+                                            const uri =
+                                                'mailto:shofickhossain@gmail.com?subject=Want To Hire You';
+                                            if (await canLaunch(uri)) {
+                                              await launch(uri);
+                                            } else {
+                                              throw 'Could not launch $uri';
+                                            }
+                                          },
+                                      ),
                                     ),
                                   ],
                                 ),
@@ -241,9 +257,21 @@ class _HeaderSectionWebState extends State<HeaderSectionWeb>
                                       style: socialTitleStyle,
                                     ),
                                     SpaceH8(),
-                                    SelectableText(
-                                      "${StringConst.BEHANCE_ID}",
-                                      style: bodyTextStyle,
+                                    RichText(
+                                      text: TextSpan(
+                                        text: StringConst.BEHANCE_ID,
+                                        style:
+                                            new TextStyle(color: Colors.blue),
+                                        recognizer: new TapGestureRecognizer()
+                                          ..onTap = () async {
+                                            const uri = StringConst.BEHANCE_ID;
+                                            if (await canLaunch(uri)) {
+                                              await launch(uri);
+                                            } else {
+                                              throw 'Could not launch $uri';
+                                            }
+                                          },
+                                      ),
                                     ),
                                   ],
                                 ),

@@ -1,3 +1,4 @@
+import 'package:ShofickHossain/utils/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:ShofickHossain/presentation/layout/adaptive.dart';
 import 'package:ShofickHossain/presentation/widgets/nimbus_link.dart';
@@ -69,22 +70,22 @@ List<Widget> buildSocialIcons(List<SocialButtonData> socialItems) {
   List<Widget> items = [];
   for (int index = 0; index < socialItems.length; index++) {
     items.add(
-      // InkWell(
-      //   onTap: () => openUrlLink(socialItems[index].url),
-      //   child: Icon(
-      //     socialItems[index].iconData,
-      //     color: AppColors.black,
-      //     size: Sizes.ICON_SIZE_18,
-      //   ),
-      // ),
-      NimBusLink(
-        url: socialItems[index].url,
+      InkWell(
+        onTap: () => openUrlLink(socialItems[index].url),
         child: Icon(
           socialItems[index].iconData,
           color: AppColors.black,
           size: Sizes.ICON_SIZE_18,
         ),
       ),
+      // NimBusLink(
+      //   url: socialItems[index].url,
+      //   child: Icon(
+      //     socialItems[index].iconData,
+      //     color: AppColors.black,
+      //     size: Sizes.ICON_SIZE_18,
+      //   ),
+      // ),
     );
     items.add(SpaceW20());
   }

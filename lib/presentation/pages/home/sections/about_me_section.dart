@@ -172,11 +172,31 @@ class _AboutMeSectionState extends State<AboutMeSection>
     TextTheme textTheme = Theme.of(context).textTheme;
     double fontSize = responsiveSize(context, 60, 72, md: 64);
     TextStyle? titleStyle = textTheme.bodyText1?.merge(
-      Styles.customTextStyle3(fontSize: fontSize, height: 1.25),
+      Styles.customTextStyle3(fontSize: 37, height: 1.25),
     );
 
     return Stack(
       children: [
+        Positioned(
+          top: width * 0,
+          // left: 15,
+          child: FadeTransition(
+            opacity: _fadeInAnimation,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  StringConst.HI,
+                  style: titleStyle,
+                ),
+                Text(
+                  StringConst.THERE,
+                  style: titleStyle,
+                ),
+              ],
+            ),
+          ),
+        ),
         Positioned(
           top: height * 0.1,
           right: -(width * 0.20),
@@ -218,26 +238,6 @@ class _AboutMeSectionState extends State<AboutMeSection>
               ),
             ),
           ],
-        ),
-        Positioned(
-          bottom: width * 0.5,
-          left: -2,
-          child: FadeTransition(
-            opacity: _fadeInAnimation,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  StringConst.HI,
-                  style: titleStyle,
-                ),
-                Text(
-                  StringConst.THERE,
-                  style: titleStyle,
-                ),
-              ],
-            ),
-          ),
         ),
       ],
     );

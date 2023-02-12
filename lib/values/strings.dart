@@ -241,7 +241,7 @@ class StringConst {
   static const String INSTAGRAM_URL =
       "https://www.instagram.com/the_computer_mind/?igshid=ZDdkNTZiNTM%3D";
   static const String GITHUB_URL = "https://github.com/the-computer-mind";
-  static const String FACEBOOK_URL = "https://facebook.com/";
+  static const String FACEBOOK_URL = "https://m.facebook.com/100004509667768/";
   static const String TWITTER_URL = "http://twitter.com/";
   static const String DAVID_LEGEND_URL = "https://github.com/the-computer-mind";
   static const String DESIGN_URL = "https://github.com/the-computer-mind";

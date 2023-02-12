@@ -52,7 +52,7 @@ class _AppDrawerState extends State<AppDrawer> {
                 children: [
                   InkWell(
                     onTap: () {},
-                    child: Text("Shofick Hossain",
+                    child: Text("Flutter Build Portfolio",
                         style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
