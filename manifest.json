@@ -1,0 +1,23 @@
+{
+    "name": "Shofick_Portfolio",
+    "short_name": "Shofick_Portfolio",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "Shofick Hossain Portfolio Build with Flutter UI with Firebase Hosting",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "icons/logo.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icons/logo.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
