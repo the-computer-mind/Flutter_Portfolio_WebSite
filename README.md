@@ -1,7 +1,7 @@
 # Shofick Hossain
 
 <h1 align="center">
-  <a href="https://www.linkedin.com/in/shofick-hossain-092a641a4" target="_blank">https://myporfolio-146e2.web.app/</a>
+  <a href="https://myporfolio-146e2.web.app/" target="_blank">https://myporfolio-146e2.web.app/</a>
 </h1>
 
 <p align="center">
